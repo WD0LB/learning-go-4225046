@@ -4,44 +4,33 @@ import "fmt"
 
 func main() {
 
-	// colors := []string{"Red", "Green", "Blue"}
-	// for i := 0; i < len(colors); i++ {
-	// 	println(colors[i])
-	// }
-
-	// for i := range colors {
-	// 	println(colors[i])
-	// }
-
-	// for _, color := range colors {
-	// 	println(color)
-	// }
-
-	// states := make(map[string]string)
-	// states["WA"] = "Washington"
-	// states["OR"] = "Oregon"
-	// states["CA"] = "California"
-	// for state, _ := range states {
-	// 	println(states[state])
-	// }
-
-	value := 0
-	sum := 0
-	for value < 5 {
-		sum += value
-		fmt.Printf("Value: %v\n", value)
-		fmt.Printf("Sum: %v\n", sum)
-		value++
+	letters := []string{"A", "B", "C"}
+	for i := 0; i < len(letters); i++ {
+		println(letters[i])
+	}
+	for i := range letters {
+		println(letters[i])
+	}
+	for _, letter := range letters {
+		println(letter)
 	}
 
-	sum = 1
-	for sum < 1000 {
-		sum += sum
-		if sum > 200 {
-			goto theEnd
+	departements := make(map[string]string)
+	departements["IT"] = "Inf Tech"
+	departements["HR"] = "Humain Resource"
+	departements["ADM"] = "Administration"
+	for departement, _ := range departements {
+		println(departements[departement])
+	}
+
+	numb := 4
+	prod := 1
+	for prod < 400 {
+		prod *= numb
+		if prod > 80 {
+			goto message
 		}
 	}
-	theEnd : println("end of program")
-	fmt.Printf("Sum: %v\n", sum)
-
+message:
+	fmt.Printf("The final prod %v\n", prod)
 }

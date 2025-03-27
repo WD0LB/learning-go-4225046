@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -10,4 +11,8 @@ func main() {
 	sum := f1 + f2 + f3
 	fmt.Println("Float sum:", sum)
 
+	sum = math.Round(sum*100) / 100
+	fmt.Println("The sum:", sum)
+	pi := math.Pi
+	fmt.Println("The value of PI:", pi)
 }

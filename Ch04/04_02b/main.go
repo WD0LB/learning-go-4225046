@@ -13,4 +13,11 @@ func main() {
 	dayNumber := int(weekday)
 	fmt.Printf("The day as a number is %v\n", dayNumber)
 
+	switch dayNumber {
+	case 1, 2, 3, 4, 5:
+		fmt.Println("Weekdays")
+	default:
+		fmt.Println("Weekends")
+	}
+
 }
